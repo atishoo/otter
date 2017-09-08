@@ -1,12 +1,11 @@
 FROM atishoo/java:otter_dependency
 MAINTAINER Atishoo
 
-ENV WEB_PORT=8080 \ 
-    MANAGER_PORT=1099
-
-EXPOSE $WEB_PORT $MANAGER_PORT
+ENV NID=1
 
 ADD node/ /otter
+
+RUN echo "$NID" > /otter/conf/nid
 
 
 CMD ["/otter/bin/startup.sh","/bin/bash"]
