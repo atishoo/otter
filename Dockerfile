@@ -10,7 +10,7 @@ ENV NID=1 \
 ADD node/ /otter
 
 RUN echo "$NID" > /otter/conf/nid \
-    && sed -i ’s/otter.manager.address = 127.0.0.1:1099/otter.manager.address = $MANAGER/’
+    && sed -i 's/otter.manager.address = 127.0.0.1:1099/otter.manager.address = $MANAGER/'
 
 EXPOSE $PORT_MACHINE $PORT_DOWNLOAD $PORT_MBEAN
 
