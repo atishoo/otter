@@ -1,4 +1,4 @@
-FROM otter
+FROM atishoo/java:otter_dependency
 MAINTAINER Atishoo
 
 ENV WEB_PORT=8080 \ 
@@ -9,4 +9,4 @@ EXPOSE $WEB_PORT $MANAGER_PORT
 ADD manager/ /otter
 
 
-CMD ["/otter/bin/startup.sh","/bin/bash"]
+CMD ["/bin/bash"]
