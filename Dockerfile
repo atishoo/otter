@@ -14,4 +14,4 @@ RUN echo "$NID" > /otter/conf/nid \
 
 EXPOSE $PORT_MACHINE $PORT_DOWNLOAD $PORT_MBEAN
 
-CMD [“/otter/bin/startup.sh”]
+CMD ["/otter/bin/startup.sh"]
