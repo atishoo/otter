@@ -8,4 +8,4 @@ ADD node/ /otter
 RUN echo "$NID" > /otter/conf/nid
 
 
-CMD ["/otter/bin/startup.sh","/bin/bash"]
+CMD ["/bin/bash"]
