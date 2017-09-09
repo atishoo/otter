@@ -7,11 +7,12 @@ ENV NID=1 \
     PORT_DOWNLOAD=2089 \
     PORT_MBEAN=2090
 
-ADD node/ /otter
-
-RUN echo "$NID" > /otter/conf/nid \
-    && sed -i 's/otter.manager.address = 127.0.0.1:1099/otter.manager.address = $MANAGER/'
+COPY node/ /otter
 
 EXPOSE $PORT_MACHINE $PORT_DOWNLOAD $PORT_MBEAN
 
-CMD ["/otter/bin/startup.sh"]
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["/bin/bash"]

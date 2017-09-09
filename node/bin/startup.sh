@@ -125,3 +125,4 @@ then
 else 
 	echo "otterNodeIdFile file("$otterNodeIdFile") OR log configration file($logback_configurationFile) is not exist,please create then first!"
 fi
+
